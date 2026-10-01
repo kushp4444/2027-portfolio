@@ -2,7 +2,7 @@ export const profile = {
   name: "Kush Patel",
   firstName: "Kush",
   lastName: "Patel",
-  email: "kmpatel@mcmaster.ca",
+  email: "patek190@mcmaster.ca",
   github: "https://github.com/kushp4444",
   githubHandle: "kushp4444",
   linkedin: "https://www.linkedin.com/in/kushp4444/",
@@ -23,16 +23,29 @@ export type Project = {
   id: string;
   index: string;
   title: string;
-  tagline: string;
+  tagline?: string;
   description: string;
   tags: string[];
   year: string;
+  status?: "In progress";
+  preview?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    id: "mesh",
+    id: "mini-ipro",
     index: "01",
+    title: "Mini-IPRO",
+    status: "In progress",
+    description:
+      "Toy-scale replica of a production oncology-imaging pipeline: DICOM QC → radiomic feature extraction → survival modeling on public lung-cancer data.",
+    tags: ["Python", "PyRadiomics", "lifelines"],
+    year: "2026",
+    preview: false,
+  },
+  {
+    id: "mesh",
+    index: "02",
     title: "Mesh",
     tagline: "3D mesh segmentation pipeline",
     description:
@@ -42,7 +55,7 @@ export const projects: Project[] = [
   },
   {
     id: "rxid",
-    index: "02",
+    index: "03",
     title: "RxID",
     tagline: "1st place — MakeUofT",
     description: "First place out of 60+ teams at MakeUofT.",
@@ -51,7 +64,7 @@ export const projects: Project[] = [
   },
   {
     id: "resdex",
-    index: "03",
+    index: "04",
     title: "ResDex",
     tagline: "Research collaboration platform",
     description:

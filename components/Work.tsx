@@ -12,6 +12,9 @@ import { ArrowUpRight } from "lucide-react";
 import { projects, type Project } from "@/lib/content";
 import Reveal from "./Reveal";
 
+// Re-enable once project screenshots are ready.
+const ENABLE_PROJECT_PREVIEWS = false;
+
 /** Abstract generative preview per project — no external images. */
 function PreviewArt({ project }: { project: Project }) {
   if (project.id === "mesh") {
@@ -90,9 +93,16 @@ function ProjectRow({
       <div className="flex items-baseline gap-3 py-4 transition-transform duration-500 ease-out group-hover:translate-x-2 md:gap-6 md:py-5">
         <span className="font-tech text-[10px] text-muted">{project.index}</span>
         <div className="min-w-0 flex-1">
-          <h3 className="font-display text-2xl font-bold leading-tight tracking-tight md:text-4xl">
-            {project.title}
-          </h3>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <h3 className="font-display text-2xl font-bold leading-tight tracking-tight md:text-4xl">
+              {project.title}
+            </h3>
+            {project.status && (
+              <span className="rounded-full border border-hairline px-2 py-0.5 font-tech text-[10px] tracking-[0.08em] text-muted">
+                {project.status}
+              </span>
+            )}
+          </div>
           <p className="mt-1.5 max-w-2xl text-xs leading-[1.45] text-muted">
             {project.description}
           </p>
@@ -116,9 +126,11 @@ function ProjectRow({
           />
         </div>
       </div>
-      <p className="pb-4 pl-6 font-tech text-[10px] tracking-[0.14em] uppercase text-accent md:pl-9">
-        {project.tagline}
-      </p>
+      {project.tagline && (
+        <p className="pb-4 pl-6 font-tech text-[10px] tracking-[0.14em] uppercase text-accent md:pl-9">
+          {project.tagline}
+        </p>
+      )}
     </div>
   );
 }
@@ -133,7 +145,10 @@ export default function Work() {
   const wrapRef = useRef<HTMLDivElement>(null);
 
   const handleHover = (p: Project, e: React.MouseEvent) => {
-    if (reduced) return;
+    if (!ENABLE_PROJECT_PREVIEWS || reduced || p.preview === false) {
+      setActive(null);
+      return;
+    }
     const r = wrapRef.current?.getBoundingClientRect();
     if (!r) return;
     x.set(e.clientX - r.left);
@@ -166,7 +181,7 @@ export default function Work() {
 
         {/* cursor-following preview (desktop, no reduced motion) */}
         <AnimatePresence>
-          {active && (
+          {ENABLE_PROJECT_PREVIEWS && active && (
             <motion.div
               aria-hidden
               className="pointer-events-none absolute left-0 top-0 z-40 hidden lg:block"
