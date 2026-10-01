@@ -15,7 +15,7 @@ export default function About() {
       <div className="max-w-3xl">
         {aboutLines.map((line, i) => (
           <Reveal key={line} delay={i * 0.08}>
-            <p className="font-display text-lg font-medium leading-[1.3] tracking-tight md:text-3xl">
+            <p className="whitespace-pre-line font-display text-lg font-medium leading-[1.3] tracking-tight md:text-3xl">
               {i === 0 ? (
                 <>
                   I build <em className="font-flair italic text-accent">production</em> AI systems — not demos.

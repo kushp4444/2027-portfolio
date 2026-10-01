@@ -9,6 +9,7 @@
   --hairline: #e4e0d4;
   --accent: #d9481c;
   --accent-soft: rgba(217, 72, 28, 0.07);
+  --current-position: #44b878;
 }
 
 .dark {
@@ -141,6 +142,29 @@ body {
 
 .section-heading {
   margin-bottom: 1.25rem;
+}
+
+.current-position-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--current-position);
+  box-shadow: 0 0 5px 1px color-mix(in srgb, var(--current-position) 30%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .current-position-dot {
+    animation: current-position-glow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes current-position-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px 1px color-mix(in srgb, var(--current-position) 30%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px color-mix(in srgb, var(--current-position) 45%, transparent);
+  }
 }
 
 section[id] {

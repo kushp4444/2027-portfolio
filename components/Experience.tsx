@@ -31,8 +31,14 @@ export default function Experience() {
             <article className="rule-t py-5 last:border-b last:border-hairline md:py-6">
               <div className="grid gap-2.5 md:grid-cols-[1fr_2fr] md:gap-6">
                 <div>
-                  <h3 className="font-display text-lg font-bold leading-tight tracking-tight md:text-2xl">
-                    {job.company}
+                  <h3 className="flex items-start gap-2 font-display text-lg font-bold leading-tight tracking-tight md:text-2xl">
+                    {job.current && (
+                      <>
+                        <span className="current-position-dot mt-[0.45em] shrink-0" aria-hidden="true" />
+                        <span className="sr-only">Current position: </span>
+                      </>
+                    )}
+                    <span>{job.company}</span>
                   </h3>
                   <p className="mt-1.5 font-tech text-[10px] tracking-[0.18em] uppercase text-muted">
                     {job.period}
@@ -54,13 +60,13 @@ export default function Experience() {
                       {job.role}
                     </p>
                   </div>
-                  <ul className="mt-2.5 space-y-1.5">
+                  <ul className="mt-3 space-y-2">
                     {job.bullets.map((b) => (
                       <li
                         key={b}
-                        className="flex gap-2 text-xs leading-[1.45] text-muted"
+                        className="flex gap-3 text-sm leading-[1.55] text-ink/80"
                       >
-                        <span aria-hidden className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                        <span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent" />
                         <span>{b}</span>
                       </li>
                     ))}
