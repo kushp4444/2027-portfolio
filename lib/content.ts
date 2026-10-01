@@ -5,8 +5,7 @@ export const profile = {
   email: "kmpatel@mcmaster.ca",
   github: "https://github.com/kushp4444",
   githubHandle: "kushp4444",
-  // TODO: replace with the real LinkedIn profile URL
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/kushp4444/",
   resume: "https://kushpatel.ca/resume.pdf",
   school: "McMaster University",
   degree: "B.A.Sc. Computer Science, Statistics minor",
@@ -15,7 +14,7 @@ export const profile = {
 };
 
 export const hero = {
-  eyebrow: "Portfolio — 2027",
+  eyebrow: "Software Engineer",
   positioning: "Software Development Intern @ RBC Enterprise Architecture,",
   positioningAccent: "building production AI systems.",
 };
@@ -71,8 +70,8 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: "RBC",
-    role: "Software Developer Intern — Enterprise Architecture",
+    company: "RBC - Enterprise Architecture",
+    role: "Software Developer Intern",
     period: "Jan 2026 – Present",
     bullets: [
       "AI disaster-recovery generator across 50+ repositories",

@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kush Patel — Software Developer",
+  title: "Kush Patel — Software Engineer",
   description:
     "Kush Patel — Software Development Intern at RBC Enterprise Architecture, building production AI systems. McMaster CS + Statistics, May 2028.",
 };

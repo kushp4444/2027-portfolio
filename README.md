@@ -36,8 +36,6 @@ palette can be retuned in one place. Theme is class-based (`.dark` on
 
 ## Notes
 
-- LinkedIn URL is not filled in yet — see the `TODO` in `lib/content.ts`
-  (`profile.linkedin`). The contact section renders "Link pending" until set.
 - Reduced-motion (`prefers-reduced-motion`) disables Lenis, the custom
   cursor, the mesh canvas animation, and the preloader delay.
 - The custom cursor only activates on fine pointers (desktop).

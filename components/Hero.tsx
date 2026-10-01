@@ -1,11 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowDown } from "lucide-react";
 import { hero, profile } from "@/lib/content";
 import MeshCanvas from "./MeshCanvas";
 import Magnetic from "./Magnetic";
-import { scrollToTarget } from "@/lib/lenis";
+import SocialLinks from "./SocialLinks";
 
 function KineticWord({
   word,
@@ -72,12 +71,12 @@ export default function Hero({ started }: { started: boolean }) {
           </span>
         </h1>
 
-        <div className="mt-4 flex flex-col gap-4 md:mt-5 md:flex-row md:items-end md:justify-between">
+        <div className="mt-4 flex flex-col gap-4 md:mt-5 md:flex-row md:items-end md:gap-8 md:justify-between">
           <motion.p
             initial={{ opacity: 0, y: reduced ? 0 : 18 }}
             animate={{ opacity: started ? 1 : 0, y: started ? 0 : reduced ? 0 : 18 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-lg text-sm leading-[1.4] text-ink/90 md:text-base"
+            className="min-w-0 max-w-2xl text-xl font-medium leading-[1.3] tracking-tight text-ink/90 md:text-2xl"
           >
             {hero.positioning}{" "}
             <em className="font-flair italic text-accent">
@@ -89,30 +88,26 @@ export default function Hero({ started }: { started: boolean }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: started ? 1 : 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-wrap items-center gap-x-4 gap-y-2 font-tech text-[10px] tracking-[0.14em] uppercase text-muted"
+            className="flex shrink-0 flex-col gap-3 font-tech text-[10px] tracking-[0.14em] uppercase text-muted"
           >
-            <Magnetic strength={0.4}>
-              <a href={profile.github} target="_blank" rel="noreferrer" className="u-sweep inline-flex min-h-10 items-center text-ink" data-cursor>GitHub</a>
-            </Magnetic>
-            <Magnetic strength={0.4}>
-              <a href={profile.resume} target="_blank" rel="noreferrer" className="u-sweep inline-flex min-h-10 items-center text-ink" data-cursor>Resume</a>
-            </Magnetic>
-            <span>{profile.location}</span>
-            <span className="hidden xl:inline">{profile.school} &rsquo;28</span>
-            <button
-              onClick={() => scrollToTarget("#work")}
-              aria-label="Scroll to selected work"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-hairline text-ink transition-colors hover:border-accent hover:text-accent"
-              data-cursor
-            >
-              <motion.span
-                animate={reduced ? {} : { y: [0, 5, 0] }}
-                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                className="flex"
-              >
-                <ArrowDown size={16} strokeWidth={1.75} />
-              </motion.span>
-            </button>
+            <div className="flex items-center gap-3">
+              <SocialLinks />
+              <Magnetic strength={0.4}>
+                <a
+                  href={profile.resume}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="u-sweep inline-flex min-h-11 items-center text-ink"
+                  data-cursor
+                >
+                  Resume
+                </a>
+              </Magnetic>
+            </div>
+            <div className="flex flex-col gap-1 text-right leading-[1.5]">
+              <span>{profile.location}</span>
+              <span>{profile.school} &rsquo;28</span>
+            </div>
           </motion.div>
         </div>
       </div>

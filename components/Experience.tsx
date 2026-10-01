@@ -1,7 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { experience } from "@/lib/content";
 import Reveal from "./Reveal";
+
+const companyLogos: Record<string, string> = {
+  "RBC - Enterprise Architecture": "rbc-logo.png",
+  "Moriroku Technology North America": "moriroku-logo.png",
+  "PBJ Cleaning Depot": "pbj-logo.png",
+};
+const assetBase = process.env.NODE_ENV === "production" ? "/2027-portfolio" : "";
 
 export default function Experience() {
   return (
@@ -31,9 +39,21 @@ export default function Experience() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-ink/90">
-                    {job.role}
-                  </p>
+                  <div className="flex items-center gap-3">
+                    {companyLogos[job.company] && (
+                      <Image
+                        src={`${assetBase}/${companyLogos[job.company]}`}
+                        alt=""
+                        width={44}
+                        height={28}
+                        unoptimized
+                        className="h-7 w-11 shrink-0 rounded-sm object-contain opacity-70 grayscale"
+                      />
+                    )}
+                    <p className="min-w-0 text-xs font-medium text-ink/90">
+                      {job.role}
+                    </p>
+                  </div>
                   <ul className="mt-2.5 space-y-1.5">
                     {job.bullets.map((b) => (
                       <li

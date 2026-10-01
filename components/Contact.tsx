@@ -119,7 +119,7 @@ export default function Contact() {
         />
         <ContactRow
           label="LinkedIn"
-          value="—"
+          value="@kushp4444"
           pending={profile.linkedin === ""}
           href={profile.linkedin || undefined}
         />
