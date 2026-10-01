@@ -19,10 +19,10 @@ function ContactRow({
 }) {
   const inner = (
     <>
-      <span className="font-tech text-[11px] tracking-[0.25em] uppercase text-muted">
+      <span className="font-tech text-[10px] tracking-[0.25em] uppercase text-muted">
         {label}
       </span>
-      <span className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight md:text-2xl">
+      <span className="flex items-center gap-2 break-all font-display text-base font-semibold tracking-tight md:text-lg">
         {pending ? (
           <span className="text-muted">Link pending</span>
         ) : (
@@ -42,7 +42,7 @@ function ContactRow({
   );
 
   const cls =
-    "group rule-t flex items-center justify-between gap-4 py-6 last:border-b last:border-hairline";
+    "group rule-t flex items-center justify-between gap-3 py-4 last:border-b last:border-hairline";
 
   return href && !pending ? (
     <a href={href} target="_blank" rel="noreferrer" className={cls} data-cursor>
@@ -67,27 +67,27 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36"
+      className="section-shell"
     >
       <Reveal>
-        <h2 className="mb-10 font-tech text-[11px] tracking-[0.35em] uppercase text-muted md:mb-14">
+        <h2 className="section-heading font-tech text-[10px] tracking-[0.28em] uppercase text-muted">
           Contact
         </h2>
       </Reveal>
 
       <Reveal>
-        <p className="max-w-3xl font-display text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl">
+        <p className="max-w-3xl font-display text-3xl font-bold leading-[1.02] tracking-tight md:text-5xl">
           Let&apos;s build something{" "}
           <em className="font-flair italic font-normal text-accent">real.</em>
         </p>
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <Magnetic>
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 font-tech text-[12px] tracking-[0.2em] uppercase text-paper transition-transform"
+              className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 font-tech text-[10px] tracking-[0.2em] uppercase text-paper transition-transform"
               data-cursor
             >
               {profile.email}
@@ -98,7 +98,7 @@ export default function Contact() {
             <button
               onClick={copyEmail}
               aria-label="Copy email address"
-              className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-hairline text-ink transition-colors hover:border-ink"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline text-ink transition-colors hover:border-ink"
               data-cursor
             >
               {copied ? (
@@ -111,7 +111,7 @@ export default function Contact() {
         </div>
       </Reveal>
 
-      <div className="mt-16 md:mt-20">
+      <div className="mt-8 md:mt-10">
         <ContactRow
           label="GitHub"
           value={`@${profile.githubHandle}`}

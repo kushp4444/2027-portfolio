@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Kush Patel — Software Development Intern at RBC Enterprise Architecture, building production AI systems. McMaster CS + Statistics, May 2028.",
 };
 
-const themeInit = `(function(){try{var t=localStorage.getItem('kp-theme');if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+const themeInit = `(function(){try{var t=localStorage.getItem('kp-theme');document.documentElement.classList.toggle('dark',t!=='light');}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
+      className={`dark ${archivo.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>

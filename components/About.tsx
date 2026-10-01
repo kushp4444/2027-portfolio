@@ -6,16 +6,16 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
+    <section className="section-shell">
       <Reveal>
-        <h2 className="mb-10 font-tech text-[11px] tracking-[0.35em] uppercase text-muted md:mb-14">
+        <h2 className="section-heading font-tech text-[10px] tracking-[0.28em] uppercase text-muted">
           About
         </h2>
       </Reveal>
       <div className="max-w-3xl">
         {aboutLines.map((line, i) => (
           <Reveal key={line} delay={i * 0.08}>
-            <p className="font-display text-2xl font-medium leading-snug tracking-tight md:text-4xl">
+            <p className="font-display text-lg font-medium leading-[1.3] tracking-tight md:text-3xl">
               {i === 0 ? (
                 <>
                   I build <em className="font-flair italic text-accent">production</em> AI systems — not demos.
@@ -25,12 +25,12 @@ export default function About() {
               )}
             </p>
             {i < aboutLines.length - 1 && (
-              <div className="my-6 border-t border-hairline md:my-8" aria-hidden />
+              <div className="my-4 border-t border-hairline md:my-5" aria-hidden />
             )}
           </Reveal>
         ))}
         <Reveal delay={0.2}>
-          <p className="mt-10 font-tech text-[11px] tracking-[0.2em] uppercase text-muted">
+          <p className="mt-6 font-tech text-[10px] tracking-[0.2em] uppercase text-muted">
             {profile.degree} — {profile.grad}
           </p>
         </Reveal>

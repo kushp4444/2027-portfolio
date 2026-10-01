@@ -23,8 +23,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero started={started} />
-        <Work />
         <Experience />
+        <Work />
         <About />
         <Contact />
       </main>

@@ -19,7 +19,7 @@ export default function Reveal({
       className={className}
       initial={{ opacity: 0, y: reduced ? 0 : y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-12% 0px" }}
+      viewport={{ once: true, margin: "-24px 0px" }}
       transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}

@@ -6,12 +6,12 @@ import { scrollToTarget } from "@/lib/lenis";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto max-w-6xl px-5 pb-10 pt-6 md:px-8">
-      <div className="rule-t flex items-center justify-between pt-6">
-        <p className="font-tech text-[11px] tracking-[0.2em] uppercase text-muted">
+    <footer className="mx-auto max-w-6xl px-5 pb-6 pt-3 md:px-8">
+      <div className="rule-t flex items-center justify-between pt-4">
+        <p className="font-tech text-[10px] tracking-[0.2em] uppercase text-muted">
           © 2026 {profile.name}
         </p>
-        <p className="hidden font-tech text-[11px] tracking-[0.2em] uppercase text-muted sm:block">
+        <p className="hidden font-tech text-[10px] tracking-[0.2em] uppercase text-muted sm:block">
           Built with Next.js
         </p>
         <button

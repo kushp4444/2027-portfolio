@@ -32,7 +32,7 @@ Deploy the contents of `out/` as a static site.
 All copy lives in `lib/content.ts` — experience, projects, contact links.
 Design tokens (palette, fonts) are CSS variables in `app/globals.css`, so the
 palette can be retuned in one place. Theme is class-based (`.dark` on
-`<html>`), defaulting to light, persisted in `localStorage` as `kp-theme`.
+`<html>`), defaulting to dark, persisted in `localStorage` as `kp-theme`.
 
 ## Notes
 

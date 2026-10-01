@@ -87,20 +87,20 @@ function ProjectRow({
       onMouseLeave={onLeave}
       data-cursor
     >
-      <div className="flex items-baseline gap-4 py-7 transition-transform duration-500 ease-out group-hover:translate-x-2 md:gap-8 md:py-9">
-        <span className="font-tech text-xs text-muted">{project.index}</span>
-        <div className="flex-1">
-          <h3 className="font-display text-3xl font-bold tracking-tight md:text-5xl">
+      <div className="flex items-baseline gap-3 py-4 transition-transform duration-500 ease-out group-hover:translate-x-2 md:gap-6 md:py-5">
+        <span className="font-tech text-[10px] text-muted">{project.index}</span>
+        <div className="min-w-0 flex-1">
+          <h3 className="font-display text-2xl font-bold leading-tight tracking-tight md:text-4xl">
             {project.title}
           </h3>
-          <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">
+          <p className="mt-1.5 max-w-2xl text-xs leading-[1.45] text-muted">
             {project.description}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-2 flex flex-wrap gap-1.5">
             {project.tags.map((t) => (
               <span
                 key={t}
-                className="rounded-full border border-hairline px-3 py-1 font-tech text-[10px] tracking-[0.14em] uppercase text-muted"
+                className="rounded-full border border-hairline px-2 py-0.5 font-tech text-[10px] tracking-[0.14em] uppercase text-muted"
               >
                 {t}
               </span>
@@ -108,7 +108,7 @@ function ProjectRow({
           </div>
         </div>
         <div className="flex shrink-0 flex-col items-end gap-2">
-          <span className="font-tech text-xs text-muted">{project.year}</span>
+          <span className="font-tech text-[10px] text-muted">{project.year}</span>
           <ArrowUpRight
             size={20}
             strokeWidth={1.5}
@@ -116,7 +116,7 @@ function ProjectRow({
           />
         </div>
       </div>
-      <p className="pb-6 pl-8 font-tech text-[11px] tracking-[0.2em] uppercase text-accent md:pl-14">
+      <p className="pb-4 pl-6 font-tech text-[10px] tracking-[0.14em] uppercase text-accent md:pl-9">
         {project.tagline}
       </p>
     </div>
@@ -142,16 +142,13 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="relative mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-36">
+    <section id="work" className="section-shell relative !pt-6 md:!pt-8">
       <div ref={wrapRef} className="relative">
         <Reveal>
-          <div className="mb-10 flex items-baseline justify-between md:mb-14">
-            <h2 className="font-tech text-[11px] tracking-[0.35em] uppercase text-muted">
+          <div className="section-heading flex items-baseline justify-between">
+            <h2 className="font-tech text-[10px] tracking-[0.28em] uppercase text-muted">
               Selected Work
             </h2>
-            <span className="font-tech text-[11px] tracking-[0.2em] text-muted">
-              (03)
-            </span>
           </div>
         </Reveal>
 

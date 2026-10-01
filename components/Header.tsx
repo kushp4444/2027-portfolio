@@ -21,14 +21,14 @@ function LocalTime() {
     return () => clearInterval(id);
   }, []);
   return (
-    <span className="font-tech text-[11px] tracking-widest text-muted tabular-nums">
+    <span className="font-tech text-[10px] tracking-widest text-muted tabular-nums">
       TOR {time}
     </span>
   );
 }
 
 function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
   }, []);
@@ -71,28 +71,28 @@ export default function Header() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8">
         <button
           onClick={() => scrollToTarget("#top")}
-          className="font-tech text-[13px] font-semibold tracking-[0.2em] uppercase"
+          className="font-tech text-[10px] font-semibold tracking-[0.2em] uppercase"
           data-cursor
         >
           {profile.name}
         </button>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Primary">
           {nav.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollToTarget(item.href)}
-              className="u-sweep font-tech text-[12px] tracking-[0.18em] uppercase text-muted transition-colors hover:text-ink"
+              className="u-sweep font-tech text-[10px] tracking-[0.18em] uppercase text-muted transition-colors hover:text-ink"
             >
               {item.label}
             </button>
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <LocalTime />
           <ThemeToggle />
         </div>
