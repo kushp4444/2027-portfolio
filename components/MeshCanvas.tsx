@@ -98,7 +98,7 @@ export default function MeshCanvas({ className = "" }: { className?: string }) {
       }
       ctx!.globalAlpha = 1;
 
-      // nodes — a few in accent, rest in ink
+      // nodes - a few in accent, rest in ink
       pts.forEach((p, i) => {
         ctx!.fillStyle = i % 9 === 0 ? accent : ink;
         ctx!.globalAlpha = i % 9 === 0 ? 0.5 : 0.28;

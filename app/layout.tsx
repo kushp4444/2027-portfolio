@@ -25,9 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kush Patel — Software Engineer",
+  title: "Kush Patel - Software Engineer",
   description:
-    "Kush Patel — Software Development Intern at RBC Enterprise Architecture, building production AI systems. McMaster CS + Statistics, May 2028.",
+    "Kush Patel - Software Development Intern at RBC Enterprise Architecture, building production AI systems. McMaster CS + Statistics, May 2028.",
 };
 
 const themeInit = `(function(){try{var t=localStorage.getItem('kp-theme');document.documentElement.classList.toggle('dark',t!=='light');}catch(e){}})();`;

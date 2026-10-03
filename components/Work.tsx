@@ -15,7 +15,7 @@ import Reveal from "./Reveal";
 // Re-enable once project screenshots are ready.
 const ENABLE_PROJECT_PREVIEWS = false;
 
-/** Abstract generative preview per project — no external images. */
+/** Abstract generative preview per project - no external images. */
 function PreviewArt({ project }: { project: Project }) {
   if (project.id === "mesh") {
     // wireframe triangle mesh
@@ -53,7 +53,7 @@ function PreviewArt({ project }: { project: Project }) {
       </svg>
     );
   }
-  // resdex — collaboration bars
+  // resdex - collaboration bars
   return (
     <svg viewBox="0 0 320 200" className="h-full w-full" aria-hidden>
       <g fill="currentColor" opacity="0.8">
@@ -196,7 +196,7 @@ export default function Work() {
                   <PreviewArt project={active} />
                 </div>
                 <p className="mt-2 text-center font-tech text-[10px] tracking-[0.25em] uppercase text-muted">
-                  {active.title} — {active.year}
+                  {active.title} - {active.year}
                 </p>
               </div>
             </motion.div>

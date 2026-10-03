@@ -18,6 +18,11 @@ npm run build    # static output in ./out/
 
 Deploy the contents of `out/` as a static site.
 
+Netlify reads `netlify.toml`: build with `npm run build`, publish `out`, and
+skip the Next.js runtime plugin for this static export. Netlify builds use
+the domain root via `NEXT_PUBLIC_BASE_PATH=""`; GitHub Pages production builds
+keep `/2027-portfolio` by default.
+
 ## Stack
 
 - Next.js 16 (app router, `output: "export"`)
@@ -29,7 +34,7 @@ Deploy the contents of `out/` as a static site.
 
 ## Content
 
-All copy lives in `lib/content.ts` — experience, projects, contact links.
+All copy lives in `lib/content.ts` - experience, projects, contact links.
 Design tokens (palette, fonts) are CSS variables in `app/globals.css`, so the
 palette can be retuned in one place. Theme is class-based (`.dark` on
 `<html>`), defaulting to dark, persisted in `localStorage` as `kp-theme`.

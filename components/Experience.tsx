@@ -9,7 +9,9 @@ const companyLogos: Record<string, string> = {
   "Moriroku Technology North America": "moriroku-logo.png",
   "PBJ Cleaning Depot": "pbj-logo.png",
 };
-const assetBase = process.env.NODE_ENV === "production" ? "/2027-portfolio" : "";
+const assetBase =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.NODE_ENV === "production" ? "/2027-portfolio" : "");
 
 export default function Experience() {
   return (

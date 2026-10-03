@@ -18,7 +18,7 @@ export default function About() {
             <p className="whitespace-pre-line font-display text-lg font-medium leading-[1.3] tracking-tight md:text-3xl">
               {i === 0 ? (
                 <>
-                  I build <em className="font-flair italic text-accent">production</em> AI systems — not demos.
+                  I build <em className="font-flair italic text-accent">production</em> AI systems - not demos.
                 </>
               ) : (
                 line
@@ -31,7 +31,7 @@ export default function About() {
         ))}
         <Reveal delay={0.2}>
           <p className="mt-6 font-tech text-[10px] tracking-[0.2em] uppercase text-muted">
-            {profile.degree} — {profile.grad}
+            {profile.degree} - {profile.grad}
           </p>
         </Reveal>
       </div>
