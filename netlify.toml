@@ -5,3 +5,8 @@
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NEXT_PUBLIC_BASE_PATH = ""
+
+[[redirects]]
+  from = "/resume"
+  to = "/resume.pdf"
+  status = 200
