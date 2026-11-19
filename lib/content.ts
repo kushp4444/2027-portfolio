@@ -61,7 +61,7 @@ export const projects: Project[] = [
     title: "ResDex",
     tagline: "Research collaboration platform",
     description:
-      "Built with a team of 5, in collaboration with 12+ PhDs. 500+ pre-signups.",
+      "Built with a team of 5, in collaboration with 12+ PhDs. 200+ signups.",
     demoUrl: "https://resdex.vercel.app/",
     tags: ["Web", "Team of 5"],
     year: "2024",
