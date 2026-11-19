@@ -38,21 +38,6 @@ function PreviewArt({ project }: { project: Project }) {
       </svg>
     );
   }
-  if (project.id === "rxid") {
-    // concentric signal rings
-    return (
-      <svg viewBox="0 0 320 200" className="h-full w-full" aria-hidden>
-        <g stroke="currentColor" fill="none" opacity="0.85">
-          <circle cx="160" cy="100" r="18" strokeWidth="1.5" />
-          <circle cx="160" cy="100" r="42" strokeWidth="1" opacity="0.7" />
-          <circle cx="160" cy="100" r="68" strokeWidth="1" opacity="0.45" />
-          <circle cx="160" cy="100" r="94" strokeWidth="1" opacity="0.25" />
-        </g>
-        <circle cx="160" cy="100" r="5" className="text-accent" fill="currentColor" />
-        <text x="160" y="104" textAnchor="middle" fontSize="11" fill="currentColor" fontFamily="monospace">1st</text>
-      </svg>
-    );
-  }
   // resdex - collaboration bars
   return (
     <svg viewBox="0 0 320 200" className="h-full w-full" aria-hidden>
@@ -117,13 +102,19 @@ function ProjectRow({
             ))}
           </div>
         </div>
-        <div className="flex shrink-0 flex-col items-end gap-2">
+        <div className="flex shrink-0 flex-col items-end gap-1">
           <span className="font-tech text-[10px] text-muted">{project.year}</span>
-          <ArrowUpRight
-            size={20}
-            strokeWidth={1.5}
-            className="text-muted transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-          />
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${project.title} demo (opens in a new tab)`}
+              className="flex size-8 items-center justify-end rounded text-muted hover:text-accent focus-visible:text-accent focus-visible:outline-2 focus-visible:outline-accent"
+            >
+              <ArrowUpRight size={20} strokeWidth={1.5} aria-hidden="true" />
+            </a>
+          )}
         </div>
       </div>
       {project.tagline && (

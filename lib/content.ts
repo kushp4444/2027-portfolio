@@ -25,6 +25,7 @@ export type Project = {
   title: string;
   tagline?: string;
   description: string;
+  demoUrl?: string;
   tags: string[];
   year: string;
   status?: "In progress";
@@ -33,13 +34,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "mini-ipro",
+    id: "mini-nota",
     index: "01",
-    title: "Mini-IPRO",
-    status: "In progress",
+    title: "Mini-Nota",
     description:
-      "Toy-scale replica of a production oncology-imaging pipeline: DICOM QC → radiomic feature extraction → survival modeling on public lung-cancer data.",
-    tags: ["Python", "PyRadiomics", "lifelines"],
+      "An interactive demo, inspired by Altis Labs, that traces how lung CT scans become model-based risk rankings.",
+    demoUrl: "https://mini-nota.vercel.app/",
+    tags: ["Python", "Next.js", "PyRadiomics"],
     year: "2026",
     preview: false,
   },
@@ -50,25 +51,18 @@ export const projects: Project[] = [
     tagline: "3D mesh segmentation pipeline",
     description:
       "Gemini / GPT-4 pipeline for 3D mesh segmentation, with a Three.js and React Three Fiber engine and BLE hardware input at 500 Hz using a Madgwick filter.",
+    demoUrl: "https://mesh-3d.vercel.app/",
     tags: ["Python", "Three.js", "React Three Fiber", "BLE", "LLMs"],
     year: "2025",
   },
   {
-    id: "rxid",
-    index: "03",
-    title: "RxID",
-    tagline: "1st place - MakeUofT",
-    description: "First place out of 60+ teams at MakeUofT.",
-    tags: ["Hackathon", "Hardware"],
-    year: "2025",
-  },
-  {
     id: "resdex",
-    index: "04",
+    index: "03",
     title: "ResDex",
     tagline: "Research collaboration platform",
     description:
       "Built with a team of 5, in collaboration with 12+ PhDs. 500+ pre-signups.",
+    demoUrl: "https://resdex.vercel.app/",
     tags: ["Web", "Team of 5"],
     year: "2024",
   },
