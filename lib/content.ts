@@ -83,10 +83,10 @@ export const experience: Experience[] = [
     role: "Software Developer Intern",
     period: "Jan 2026 – Present",
     bullets: [
-      "Eliminated stale documentation, saving 26k+ hours of manual documentation YTD across 1,316 unique repos — LLMs analyze codebases to generate architecture diagrams and full technical wikis",
-      "Accelerated multi-repo analysis speed by 100%, doubling capacity from 10 to 20 concurrent repos per analysis, via a parallel multi-agent orchestration system",
-      "Decoupled a legacy UI-locked monolith into independent microservices, exposing the platform through a single API to enable MCP and CI/CD adoption — fresh documentation on every production release",
-      "Drove a company-wide Claude Code rollout to 100% business-line adoption — single-handedly built a full-stack governance portal with 3-tier RBAC, audit trails, and spend analytics for VP-level ROI tracking",
+      "Saved 26k+ hours of manual documentation YTD across 1,316 unique repositories by building an LLM pipeline that turns code into architecture diagrams and technical wikis",
+      "Doubled analysis speed and concurrent capacity from 10 to 20 repos by leveraging multi-agent orchestration",
+      "Split a UI-bound monolith into microservices behind a singular API, enabling MCP and CI/CD adoption",
+      "Built a full-stack governance portal for Claude Code wave 1 rollout with 3-tier RBAC, audit trails, and spend analytics on 3733 license requests across all lines of business",
     ],
   },
   {
@@ -94,9 +94,8 @@ export const experience: Experience[] = [
     role: "Software Engineering Intern",
     period: "Jun 2025 – Aug 2025",
     bullets: [
-      "Automated production scheduling: live order-data pipeline from MS Dynamics 365 to MS SQL into a CP-SAT model (Google OR-Tools), delivering a Gantt chart in Vue — 3-4x scheduling capacity per cycle",
-      "Real-time Vue OEE dashboard across 20+ production lines, boosting downtime response speed by ~30%",
-      "Centralized template management platform (PostgreSQL + Node.js/Express + FastAPI) with auth and audit logging — update time from hours to minutes, 80% fewer errors",
+      "Automated and expanded production scheduling by 3-4x per cycle by building a live data pipeline feeding Dynamics 365 orders into Google’s CP-SAT model delivering a Gantt Chart in Vue",
+      "Improved downtime response speed by ~30% across 20+ production lines by building a live OEE dashboard in Vue.",
     ],
   },
   {
@@ -104,9 +103,8 @@ export const experience: Experience[] = [
     role: "Software Engineering Intern",
     period: "May 2024 – Aug 2024",
     bullets: [
-      "Multi-module ERP system projected to save ~$25K/year by cutting external licenses 80%",
-      "Cut manual data entry 60% and lifted inventory accuracy to 99.5% via automated stock monitoring and purchase-order workflows with real-time tracking",
-      "RESTful APIs in Go — JWT auth, bcrypt, RBAC across 20+ protected endpoints",
+      "Built a multi-module ERP system projected to reduce external software licenses by ~80% and save ~$25K per year",
+      "Built RESTful APIs in Go with JWT-based auth, bcrypt, and RBAC across 20+ protected endpoints",
     ],
   },
 ];
