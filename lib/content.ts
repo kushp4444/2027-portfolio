@@ -86,7 +86,7 @@ export const experience: Experience[] = [
       "Saved 26k+ hours of manual documentation YTD across 1,316 unique repositories by building an LLM pipeline that turns code into architecture diagrams and technical wikis",
       "Doubled analysis speed and concurrent capacity from 10 to 20 repos by leveraging multi-agent orchestration",
       "Split a UI-bound monolith into microservices behind a singular API, enabling MCP and CI/CD adoption",
-      "Built a full-stack governance portal for Claude Code wave 1 rollout with 3-tier RBAC, audit trails, and spend analytics on 3733 license requests across all lines of business",
+      "Built a full-stack governance portal for Claude Code wave 1 rollout with 3-tier RBAC, audit trails, and spend analytics on 3273 license requests across all lines of business",
     ],
   },
   {
