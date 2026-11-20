@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{empty}
+
+% Letter paper with 0.40 in side margins and 0.42 in top and bottom margins.
+\setlength{\oddsidemargin}{-0.60in}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\topmargin}{-0.58in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\textwidth}{7.7in}
+\setlength{\textheight}{10.16in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}
+  {\scshape\raggedright\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{7pt}
+
+% Add Unicode mappings when compiling with pdfLaTeX.
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item {\fontsize{10.5}{13}\selectfont #1\hfill #2\par}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0pt,label={},topsep=0pt,itemsep=7pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=16pt,topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt]
+  \fontsize{10.2}{13.5}\selectfont}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+{\centering
+    {\Huge \scshape Kush Patel} \\ \vspace{5pt}
+    \small \href{mailto:kushp4444@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{kushp4444@gmail.com}} ~
+    \href{https://linkedin.com/in/kushp4444/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/kushp4444}}  ~
+    \href{https://github.com/kushp4444}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kushp4444}}  ~
+    \href{https://kushpatel.ca}{\raisebox{-0.2\height}\faGlobe\ \underline{kushpatel.ca}}
+\par}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{Expected Grad. May 2028}
+      {B.A.Sc - Computer Science (Minor in Statistics)}{Hamilton, ON}
+  % \resumeItemListStart
+  %   \resumeItem{\textbf{Relevant Coursework:} Data Structures, Algorithms, Databases, Concurrency, Operating Systems, Data Science, Stats, Regression Analysis, Machine Learning}
+  % \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Royal Bank of Canada (RBC)}{Jan -- Present}
+      {Software Developer Intern -- Enterprise Architecture}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Saved \textbf{26k+ hours} of manual documentation YTD across \textbf{1,316 unique repositories} by building an LLM pipeline that turns code into architecture diagrams and technical wikis}
+        \resumeItem{\textbf{Doubled} analysis speed and concurrent capacity from 10 to 20 repos by leveraging \textbf{multi-agent orchestration}}
+        \resumeItem{Split a UI-bound monolith into microservices behind a singular API, enabling \textbf{MCP and CI/CD} adoption}
+        \resumeItem{Built a full-stack \textbf{governance portal} for Claude Code wave 1 rollout with 3-tier RBAC, audit trails, and spend analytics on \textbf{3733 license requests} across all lines of business}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Moriroku Technology North America}{June -- Aug 2025}
+      {Software Engineering Intern}{Listowel, ON}
+      \resumeItemListStart
+        \resumeItem{Automated and expanded production scheduling by 3-4x per cycle by building a \textbf{live data pipeline} feeding Dynamics 365 orders into Google’s CP-SAT model delivering a Gantt Chart in Vue}
+        \resumeItem{Improved downtime response speed by \textbf{$\sim$30\% across 20+ production lines} by building a live OEE dashboard in Vue.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {PBJ Cleaning Depot Inc.}{May -- Aug 2024}
+      {Software Engineering Intern}{Listowel, ON}
+      \resumeItemListStart
+        \resumeItem{Built a multi-module ERP system projected to reduce external software licenses by $\sim$\textbf{80\%} and save \textbf{$\sim$\$25K per year}}
+        \resumeItem{Built RESTful APIs in Go with JWT-based auth, bcrypt, and RBAC across 20+ protected endpoints}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Mesh -- GeoSpatial 3D Coordination Platform} $|$ \emph{Next.js, React, Three.js, TypeScript}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a \textbf{multi-stage AI pipeline} chaining \textbf{Gemini Pro} and \textbf{GPT-4} via OpenRouter to auto-segment and annotate \textbf{100+ mesh components} per 3D model}
+            \resumeItem{Built a \textbf{real-time WebGL engine} with \textbf{Three.js} and \textbf{React Three Fiber}, delivering exploded views, component isolation, bloom post-processing, and raycasting selection at \textbf{60fps}}
+            \resumeItem{Engineered \textbf{BLE hardware integration} with \textbf{Arduino M5StickCPlus2}, streaming quaternion data at \textbf{500Hz} with \textbf{$<$2ms} latency using a \textbf{Madgwick AHRS filter} for physical 3D model control}
+          \resumeItemListEnd
+            \resumeProjectHeading
+          {\textbf{Mini-Nota} $|$ \emph{Python, PyRadiomics, lifelines, FastAPI, Next.js, PostgreSQL}}{}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{CT imaging pipeline} that checks DICOM scans, builds tumor masks, and extracts \textbf{72 radiomic features} per patient. Trained a Cox survival model on \textbf{332 Lung1 patients} and evaluated it on \textbf{82 held-out patients}.}
+            \resumeItem{Deployed live imaging jobs on \textbf{Modal} and built a \textbf{Next.js} workspace with audit trails, approval gates, and \textbf{PostgreSQL}-backed run recovery.}
+          \resumeItemListEnd
+            \resumeProjectHeading
+          {\textbf{ResDex} $|$ \emph{Startup Software Lead}}{}
+          \resumeItemListStart
+            \resumeItem{Leading a team of 5 to build a student-focused \textbf{social media platform} for academic research, enabling sharing via QR-enabled portfolios and short-form content}
+            \resumeItem{Collaborated with \textbf{12+ PhD professionals}, securing \textbf{200+ pre-signups} from top institutions (UofT, McMaster, etc)}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ {\fontsize{10}{13.2}\selectfont
+     \textbf{Languages}{: Python, TypeScript, JavaScript, Go, SQL, HTML/CSS} \\
+     \textbf{Libraries}{: OR-Tools, PyRadiomics, lifelines, Pandas, Scikit-learn, Matplotlib, Three.js, React Three Fiber, Tailwind CSS} \\
+     \textbf{Frameworks}{: Next.js, React, Vue.js, Node.js/Express, FastAPI} \\
+     \textbf{Databases \& APIs}{: PostgreSQL, SQL Server, GraphQL, REST, MCP}
+  \par}
+
+\end{document}
